@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-18T00:00:00+07:00",
+  "title": "Design System: KU Join",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "KU Registration Green", "canonical": "oklch(0.45 0.12 164)", "tonalRamp": ["oklch(0.22 0.06 164)", "oklch(0.32 0.09 164)", "oklch(0.45 0.12 164)", "oklch(0.59 0.11 164)", "oklch(0.74 0.08 164)", "oklch(0.86 0.04 164)", "oklch(0.94 0.02 164)", "oklch(0.98 0.01 164)"] },
+      "accent-gold": { "role": "secondary", "displayName": "Active Gold", "canonical": "oklch(0.78 0.16 86)", "tonalRamp": ["oklch(0.26 0.07 86)", "oklch(0.38 0.1 86)", "oklch(0.52 0.13 86)", "oklch(0.66 0.15 86)", "oklch(0.78 0.16 86)", "oklch(0.87 0.12 86)", "oklch(0.94 0.07 86)", "oklch(0.98 0.03 86)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Ceremony Headline", "purpose": "Public event titles." },
+      "body": { "displayName": "Operational Thai Text", "purpose": "Forms, tables, and administration." }
+    },
+    "shadows": [
+      { "name": "panel-lift", "value": "0 5px 20px rgb(8 61 48 / .06)", "purpose": "Separate a task panel from the work surface." },
+      { "name": "form-lift", "value": "0 8px 28px rgb(8 61 48 / .09)", "purpose": "Emphasize the primary registration task." }
+    ],
+    "motion": [
+      { "name": "state-transition", "value": "150-200ms ease-out", "purpose": "Hover and selection feedback only." }
+    ],
+    "breakpoints": [
+      { "name": "compact", "value": "760px" }
+    ]
+  },
+  "components": [
+    { "name": "Primary Button", "kind": "button", "refersTo": "button-primary", "description": "The single main action in a task group.", "html": "<button class=\"ds-primary\">ลงทะเบียน</button>", "css": ".ds-primary{min-height:46px;padding:10px 20px;border:0;border-radius:8px;background:oklch(0.45 0.12 164);color:#fff;font:700 16px/1.2 sans-serif;transition:transform .15s ease,background .15s ease}.ds-primary:hover{background:oklch(0.32 0.09 164);transform:translateY(-1px)}.ds-primary:focus-visible{outline:3px solid oklch(0.78 0.16 86);outline-offset:2px}" },
+    { "name": "Text Field", "kind": "input", "refersTo": "input", "description": "Labeled form input with high-contrast focus.", "html": "<input class=\"ds-input\" value=\"ข้อมูลตัวอย่าง\" aria-label=\"ข้อมูลตัวอย่าง\">", "css": ".ds-input{min-height:42px;padding:8px 12px;border:1px solid oklch(0.89 0.012 164);border-radius:8px;color:oklch(0.23 0.025 164);background:#fff;font:400 16px/1.4 sans-serif}.ds-input:focus{outline:none;border-color:oklch(0.45 0.12 164);box-shadow:0 0 0 3px oklch(0.45 .12 164 / .16)}" },
+    { "name": "Schedule Filter", "kind": "chip", "refersTo": "filter-chip", "description": "Filter an attendee list by schedule activity.", "html": "<button class=\"ds-filter\">ทั้งหมด <b>36</b></button>", "css": ".ds-filter{display:inline-flex;gap:6px;align-items:center;min-height:37px;padding:7px 11px;border:1px solid oklch(0.89 0.012 164);border-radius:8px;background:#fff;color:oklch(0.32 0.09 164);font:600 14px/1.2 sans-serif}.ds-filter b{padding:3px 7px;border-radius:999px;background:oklch(0.94 .012 164);font-size:12px}.ds-filter:hover,.ds-filter:focus-visible{border-color:oklch(.45 .12 164);background:oklch(.45 .12 164);color:#fff}" },
+    { "name": "Mobile Admin Toggle", "kind": "nav", "refersTo": "admin-mobile-toggle", "description": "A 44px control that reveals the compact admin navigation.", "html": "<button class=\"ds-menu\">☰ เมนู</button>", "css": ".ds-menu{min-width:44px;min-height:44px;padding:8px 11px;border:1px solid rgb(255 255 255 / .32);border-radius:8px;background:rgb(255 255 255 / .1);color:#fff;font:700 14px/1 sans-serif}.ds-menu:focus-visible{outline:3px solid oklch(.78 .16 86);outline-offset:2px}" }
+  ],
+  "narrative": {
+    "northStar": "The Organized Ceremony Desk",
+    "overview": "KU Join is a calm, operational event-registration system. Strong green navigation and white task surfaces keep participant and staff actions clear under event-day pressure.",
+    "keyCharacteristics": ["Green means action.", "White panels isolate tasks.", "Thai-first operational type.", "Local Boxicons assets."],
+    "rules": [{ "name": "The Green Means Action Rule", "body": "Primary green always signals the active route, confirmed selection, or primary action.", "section": "colors" }, { "name": "The Single Surface Rule", "body": "Do not nest shadowed panels inside shadowed panels.", "section": "elevation" }],
+    "dos": ["Do use local Boxicons SVG assets.", "Do retain coherent table controls."],
+    "donts": ["Don't use decorative gradient text.", "Don't hide critical mobile navigation behind horizontal scrolling."]
+  }
+}
