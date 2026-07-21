@@ -28,7 +28,6 @@ $styleVersion = (string) filemtime(__DIR__ . '/../assets/css/style.css');
       <a class="<?= $activePage === 'register' ? 'is-active' : '' ?>" href="<?= e(url('index.php')) ?>"><i class="bx bx-edit-alt" aria-hidden="true"></i>ลงทะเบียน</a>
       <a class="<?= $activePage === 'list' ? 'is-active' : '' ?>" href="<?= e(url('list.php')) ?>"><i class="bx bx-group" aria-hidden="true"></i>รายชื่อผู้เข้าร่วม</a>
       <a class="<?= $activePage === 'summary' ? 'is-active' : '' ?>" href="<?= e(url('summary.php')) ?>"><i class="bx bx-bar-chart-alt-2" aria-hidden="true"></i>สรุปผล</a>
-      <a class="admin-link" href="<?= e(admin_url('login.php')) ?>"><i class="bx bx-lock-alt" aria-hidden="true"></i>ผู้ดูแล</a>
     </nav>
   </div>
 </header>
