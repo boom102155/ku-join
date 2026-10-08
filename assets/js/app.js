@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const adminMenu = document.querySelector('[data-admin-menu]');
   const adminToggle = document.querySelector('[data-admin-menu-toggle]');
   if (adminShell && adminMenu && adminToggle) {
-    const mobileQuery = window.matchMedia('(max-width: 760px)');
+    const mobileQuery = window.matchMedia('(max-width: 1024px)');
     const syncAdminMenu = () => {
       const isMobile = mobileQuery.matches;
       const isOpen = adminShell.classList.contains('is-menu-open');
